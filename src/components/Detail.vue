@@ -20,17 +20,20 @@
       </div>
     </section>
     <section class="comments">
-      <h2>댓글</h2>
-      <p>댓글 기능은 곧 추가될 예정입니다.</p>
+      <CommentList :contentId="contentId"/>
     </section>
   </div>
 </template>
 
 <script>
 import data from '@/data';
+import CommentList from './CommentList.vue';
 
 export default {
   name: 'Detail',
+  components: {
+    CommentList
+  },
   props: {
     contentId: {
       type: Number,

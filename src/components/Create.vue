@@ -38,7 +38,6 @@
   
   <script>
   import data from "@/data";
-  
   export default {
     name: "Create",
     props: {
@@ -77,11 +76,6 @@
     },
     methods: {
       createPost() {
-        if (!this.title || !this.context) {
-          alert("제목과 내용을 모두 입력하세요.");
-          return;
-        }
-
         if (this.updateMode) {
           this.updateObject.title = this.title;
           this.updateObject.context = this.context;
@@ -129,23 +123,19 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     height: 100vh;
   }
-  
   h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     text-align: center;
   }
-  
   .form-group {
     margin-bottom: 15px;
   }
-  
   label {
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
   }
-  
   input, textarea {
     width: 100%;
     padding: 10px;
@@ -153,18 +143,15 @@
     border-radius: 4px;
     font-size: 1rem;
   }
-  
   textarea {
     resize: vertical;
   }
-  
   .form-actions {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
     margin-top: 20px;
   }
-  
   .create-button {
     background-color: #007bff;
     color: white;
@@ -175,16 +162,13 @@
     font-size: 0.875rem;
     transition: background-color 0.3s;
   }
-  
   .create-button:hover {
     background-color: #0056b3;
   }
-  
   .create-button:disabled {
     background-color: #6c757d;
     cursor: not-allowed;
   }
-  
   .cancel-link {
     text-decoration: none;
     padding: 6px 12px;
@@ -194,7 +178,6 @@
     font-size: 0.875rem;
     transition: background-color 0.3s;
   }
-  
   .cancel-link:hover {
     background-color: #5a6268;
   }

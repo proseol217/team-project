@@ -30,7 +30,7 @@
 		  </ul>
 		</div>
   
-		<!-- 검색창 -->
+		
 		<div class="navbar-right">
 		  <input type="text" class="search-input" placeholder="Search..." />
 		</div>
@@ -42,24 +42,24 @@
 export default {
 	data() {
 	  return {
-		currentPath: '/', // 기본 경로를 '/'로 설정
-		isDropdownActive: false, // 드롭다운 활성화 상태
+		currentPath: '/', 
+		isDropdownActive: false, 
 	  };
 	},
 	methods: {
 	  setCurrentPath(path) {
-		this.currentPath = path; // currentPath 업데이트
+		this.currentPath = path; 
 	  },
 	  toggleDropdown(isActive) {
 		this.isDropdownActive = isActive;
 	  },
 	  navigateToHome() {
-		this.currentPath = '/'; // 홈으로 이동 시 currentPath 업데이트
-		this.$router.push('/'); // 메인 화면으로 이동
+		this.currentPath = '/'; 
+		this.$router.push('/'); 
 	  },
 	  navigateToBoard() {
-		this.currentPath = '/board/free'; // 보드로 이동 시 currentPath 업데이트
-		this.$router.push('/board/free'); // /board/free 경로로 이동
+		this.currentPath = '/board/free'; 
+		this.$router.push('/board/free'); 
 	  },
 	},
 };
@@ -98,7 +98,7 @@ export default {
 	padding: 0;
 }
 .navbar-menu li {
-	position: relative; /* 드롭다운 메뉴를 위해 상대 위치 지정 */
+	position: relative;
 	margin-right: 10px; 
 }
 .navbar-menu li a {
@@ -106,37 +106,37 @@ export default {
 	padding: 5px 10px;
 	text-decoration: none;
 	font-size: 1rem;
-	transition: color 0.3s; /* 부드러운 전환 효과 */
+	transition: color 0.3s;
 }
 .navbar-menu li a:hover {
-	color: #333; /* 마우스를 올렸을 때 진한 색으로 */
+	color: #333; 
 }
 .navbar-menu li a.active {
-	color: #000; /* 현재 위치한 곳은 진한 색으로 표시 */
+	color: #000;
 }
 
 /* 드롭다운 메뉴 스타일 */
 .dropdown-menu {
-	display: block; /* 드롭다운 메뉴 표시 */
-	position: absolute; /* 드롭다운 위치 설정 */
-	background-color: #fff; /* 드롭다운 배경색 */
+	display: block; 
+	position: absolute; 
+	background-color: #fff;
 	border: 1px solid #dcdcdc;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-	z-index: 1000; /* 위에 표시되도록 */
+	z-index: 1000;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	width: 150px; /* 드롭다운 너비 설정 */
+	width: 150px; 
 }
 .dropdown-menu li {
-	margin: 0; /* 드롭다운 항목 간의 간격 없음 */
+	margin: 0; 
 }
 .dropdown-menu li a {
-	padding: 10px; /* 드롭다운 항목 패딩 */
-	display: block; /* 드롭다운 항목 전체 클릭 가능 */
+	padding: 10px; 
+	display: block; 
 }
 .dropdown-menu li a:hover {
-	background-color: #f0f0f0; /* 호버 시 배경색 변경 */
+	background-color: #f0f0f0; 
 }
 
 /* 오른쪽 검색창 */
